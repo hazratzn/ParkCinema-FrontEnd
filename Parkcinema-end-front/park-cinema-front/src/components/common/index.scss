@@ -1,0 +1,32 @@
+@import "../../scss/index.scss";
+
+.movie-title {
+  font-size: 12px;
+  font-family: "HelveticaBold";
+  font-weight: bold !important;
+  margin-top: -4px;
+  color: $secondary-color;
+  font-size: 12px;
+  text-decoration: none;
+}
+.movie-language {
+  display: inline-block;
+  color: $disclaimer-color;
+  padding: 0;
+  margin: 2px 3px 0 0;
+  font-family: "HelveticaRegular";
+}
+.movie-date {
+  font-size: 12px;
+  font-family: "HelveticaRegular";
+  margin-top: -1px;
+  color: #e2e6e8;
+}
+.movie-claimer-age {
+  border: $disclaimer-color solid 1px;
+  display: inline-block;
+  color: $disclaimer-color;
+  border-radius: 4px;
+  padding: 0 3px;
+  margin: 2px 0;
+}

@@ -1,0 +1,232 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-logo {
+  height: 150px;
+  width: 150px;
+}
+
+.nav-logo .nav-logo-link {
+  display: inline-block;
+  background: url(../../public/images/logo/park-cinema-logo.png) no-repeat;
+  width: 178px;
+  height: 192px;
+  background-size: 100%;
+}
+
+.main-list {
+  margin-top: 17px;
+}
+
+.main-list .navbar-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main-list .navbar-nav .nav-item .nav-link {
+  padding: 10px 18px 10px 5px;
+  font-size: 15px;
+  line-height: 36px;
+  color: #fff;
+  background-image: url(../../public/images/slash.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  font-weight: normal;
+}
+
+.main-list .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+}
+
+.main-list .navbar-nav .nav-item:last-child > a {
+  background: none;
+}
+
+.submain-list {
+  margin-top: 30px;
+}
+
+.submain-list .language-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -152px;
+  margin-top: -9px;
+}
+
+.submain-list .language-list .language-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.submain-list .language-list .language-links li {
+  list-style: none;
+}
+
+.submain-list .language-list .language-links li a {
+  color: white;
+  display: block;
+  height: 19px;
+  margin: 8px;
+  font-size: 11px;
+  line-height: 25px;
+}
+
+.submain-list .language-list .language-links li .language-slash {
+  color: white;
+  display: block;
+  height: 19px;
+  margin: 8px 0;
+  line-height: 25px;
+}
+
+.submain-list .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin-top: 6px;
+  padding: 0;
+  margin-left: 12px;
+}
+
+.submain-list .social-list a {
+  display: block;
+  width: 16px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 8px;
+}
+
+.submain-list .social-list .ios-icon {
+  background-image: url(../../public/images/ios.png);
+}
+
+.submain-list .social-list .android-icon {
+  background-image: url(../../public/images/android.png);
+}
+
+.Slider {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Slider .intro-movie {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 25px;
+  position: relative;
+  background-image: url(../../public/images/MoviesIntro/aline.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 686px;
+  padding-bottom: 30px;
+}
+
+.Slider .intro-movie .movie-detail {
+  margin-bottom: -20px;
+  position: absolute;
+  bottom: 100px;
+}
+
+.Slider .intro-movie .movie-detail .Title {
+  font-family: "helveticaAZ";
+  font-weight: bold;
+  font-size: 66px;
+  margin: 0;
+}
+
+.Slider .intro-movie .movie-detail .SubTitle {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+.Slider .intro-movie .ticketBtn {
+  background-color: #008fd7;
+  position: absolute;
+  top: 91%;
+  text-transform: uppercase;
+  font-family: "PFSquareSansProBold";
+  border-radius: 10px;
+  padding: 5px 20px;
+  color: white;
+  border: none;
+  font-size: 14px;
+}
+
+.Slider .second {
+  background-image: url(../../public/images/MoviesIntro/kingsman-cover.png);
+}
+
+.Slider .third {
+  background-image: url(../../public/images/MoviesIntro/monster-cover.png);
+}
+
+.Slider .fourth {
+  background-image: url(../../public/images/MoviesIntro/nightmare-alley.png);
+}
+
+.Slider .five {
+  background-image: url(../../public/images/MoviesIntro/scream-cover.png);
+}
+
+.Slider .six {
+  background-image: url(../../public/images/MoviesIntro/kod-355.png);
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  display: block;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.shadow-top {
+  position: absolute;
+  width: 100%;
+  height: 325px;
+  top: 0;
+  background: url(../../public/images/top-shadow.png) repeat-x top center;
+}
+
+.shadow-bottom {
+  position: absolute;
+  width: 100%;
+  height: 178px;
+  bottom: 0;
+  background: url(../../public/images/bottom-shadow.png) repeat-x bottom center;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+}
