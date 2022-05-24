@@ -4,13 +4,18 @@ import Container from "react-bootstrap/Container";
 import "./index.scss";
 
 const SimpleSlider = () => {
+  const [dot, Setdot] = React.useState("slick-dot");
   const settings = {
     dots: true,
     infinite: true,
     speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
-    customPaging: () => <div className="slick-dot active"></div>,
+    customPaging: () => (
+      <div className={dot} onClick={Setdot("slick-dot active")}>
+        {" "}
+      </div>
+    ),
   };
 
   return (

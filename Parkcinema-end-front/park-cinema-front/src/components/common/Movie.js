@@ -32,17 +32,15 @@ const Movie = () => {
             <div className="movie-date">
               <span>27 Yanvar</span>
             </div>
-            <div>
+            <div className="movie-type">
               <span>2D</span>
             </div>
 
             <div className="movie-language">
               <span>RU</span>
             </div>
-            <div>
-              <span>
-                <span>6+</span>
-              </span>
+            <div className="movie-claimer-age">
+              <span>6+</span>
             </div>
           </div>
         </Col>

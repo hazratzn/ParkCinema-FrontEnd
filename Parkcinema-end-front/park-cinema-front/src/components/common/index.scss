@@ -10,13 +10,22 @@
   text-decoration: none;
 }
 .movie-language {
-  display: inline-block;
   color: $disclaimer-color;
   padding: 0;
   margin: 2px 3px 0 0;
   font-family: "HelveticaRegular";
+  font-size: $base * 3;
+  span {
+    display: inline-block;
+  }
 }
 .movie-date {
+  font-size: 12px;
+  font-family: "HelveticaRegular";
+  margin-top: -1px;
+  color: $third-text-color;
+}
+.movie-type {
   font-size: 12px;
   font-family: "HelveticaRegular";
   margin-top: -1px;

@@ -7,23 +7,12 @@ const Movies = () => {
   return (
     <Container>
       <Col md={9}>
+        <div className="main-buttons">
+          <div className="filter-button activeMovie">Bu gün</div>
+          <div className="filter-button">Tezliklə</div>
+          <div className="filter-button">Cədvəl</div>
+        </div>
         <div className="main-movies">
-          <div className="movie-buttons">
-            <button>x</button>
-            <button>x</button>
-            <button>x</button>
-            <button>x</button>
-            <button>x</button>
-            <button>x</button>
-          </div>
-          <div>
-            <select>
-              <option></option>
-            </select>
-          </div>
-          <div>
-            <button>okkkkkk</button>
-          </div>
           <Row>
             <Col md={4}>
               <Movie />
