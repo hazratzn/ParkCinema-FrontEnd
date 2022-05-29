@@ -6,6 +6,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 9;
 }
 .nav-logo {
   height: 150px;
@@ -20,7 +21,7 @@ nav {
   }
 }
 .main-list {
-  margin-top: 17px;
+  margin-top: 17px !important;
   .navbar-nav {
     flex-direction: row;
     .nav-item {
