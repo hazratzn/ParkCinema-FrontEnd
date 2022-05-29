@@ -1,0 +1,42 @@
+@import "../../../scss/index.scss";
+.offer-title {
+  color: $secondary-color;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 37.56px;
+  letter-spacing: -0.04px;
+  max-width: 610px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+.offer-about {
+  font-size: 14px;
+  color: $secondary-color;
+  img {
+    width: 900px;
+  }
+  p {
+    padding: 10px 65px 10px 0;
+  }
+}
+.benefits-info {
+  h3 {
+    font-size: 22px;
+    letter-spacing: 0.07px;
+    line-height: 22px;
+    color: $secondary-color;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0 20px 0 0;
+  }
+  ul {
+    font-size: 13px;
+    letter-spacing: 0.04px;
+    line-height: 15px;
+    padding: 0;
+    li {
+      margin-bottom: 5px;
+      color: $secondary-color;
+    }
+  }
+}

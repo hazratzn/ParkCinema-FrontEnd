@@ -1,51 +1,54 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "./index.scss";
-import image from "../../images/Bedheybet.jpg";
-import axios from "axios";
-const Movie = () => {
-  const [movies, setMovies] = React.useState();
+import Moment from "react-moment";
+import { Link } from "react-router-dom";
 
-  let url = "https://61e7b7b5e32cd90017acbcc9.mockapi.io";
-  React.useEffect(() => {
-    axios.get(`${url}/movies`).then((res) => setMovies(res.data));
-  }, []);
+const Movie = ({ movie }) => {
+  const date = movie.startTime;
+
   return (
-    <div>
+    <>
       <Row>
         <Col md={6}>
-          <div className="movie-image">
-            <img src={image} alt="movie" className="img-fluid" />
+          <div className="movie-image" key={movie.id}>
+            <Link to={{ pathname: `/movie/${movie.id}` }}>
+              <img src={movie.image} alt="movie" className="img-fluid" />
+            </Link>
+            <button className="movie-ticket-buy">
+              <Link
+                to={{ pathname: `/movie/${movie.id}` }}
+                className="movie-link-detail"
+              >
+                Bilet al
+              </Link>
+            </button>
           </div>
         </Col>
         <Col md={6}>
-          {/* {movies?.map((movie) => (
-            <div className="movie-description" key={movie.id}>
-                    
-           
-
-            </div> */}
-          <div className="movie-description">
-            <a className="movie-title" href="/">
-              Biz bədheybətik 2
-            </a>
+          <div className="movie-description" key={movie.id}>
+            <Link
+              to={{ pathname: `/movie/${movie.id}` }}
+              className="text-decoration-none movie-title"
+            >
+              {movie.name}
+            </Link>
             <div className="movie-date">
-              <span>27 Yanvar</span>
+              <span>
+                <Moment date={date} format="DD MMMM" />
+              </span>
             </div>
             <div className="movie-type">
-              <span>2D</span>
+              <span>{movie.formats}</span>
             </div>
-
             <div className="movie-language">
-              <span>RU</span>
+              <span>{movie.languages}</span>
             </div>
-            <div className="movie-claimer-age">
-              <span>6+</span>
-            </div>
+            <div className="movie-claimer-age">{movie.claimerAge}+</div>
           </div>
         </Col>
       </Row>
-    </div>
+    </>
   );
 };
 

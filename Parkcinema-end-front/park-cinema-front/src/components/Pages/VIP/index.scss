@@ -1,0 +1,29 @@
+@import "../../../scss/index.scss";
+.vip-detail-description {
+  h3 {
+    color: $secondary-color;
+    margin: 10px 0;
+  }
+  p {
+    margin: 0 0 20px;
+    font-size: 13px;
+    line-height: 17px;
+    color: $secondary-color;
+  }
+}
+.carousel-root {
+  padding: 15px;
+  background: #151515;
+}
+.carousel {
+  .thumbs {
+    left: 20%;
+  }
+
+  .thumbs-wrapper {
+    margin: 0;
+  }
+}
+.vip-title {
+  @include title-style;
+}

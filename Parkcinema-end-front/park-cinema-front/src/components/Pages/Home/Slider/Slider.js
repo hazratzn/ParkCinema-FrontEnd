@@ -12,14 +12,17 @@ const SimpleSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     customPaging: () => (
-      <div className={dot} onClick={Setdot("slick-dot active")}>
-        {" "}
-      </div>
+      <div
+        className={dot}
+        onClick={() => {
+          Setdot("slick-dot active");
+        }}
+      ></div>
     ),
   };
 
   return (
-    <div className="Slider">
+    <div className="slider">
       <Slider {...settings}>
         <div className="intro-movie">
           <div className="shadow-top"></div>

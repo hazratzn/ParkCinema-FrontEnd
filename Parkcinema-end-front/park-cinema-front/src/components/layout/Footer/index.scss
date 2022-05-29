@@ -1,0 +1,40 @@
+@import "../../../scss/index.scss";
+.footer-wrapper {
+  min-height: 150px;
+}
+
+.footer-left {
+  background: #1b1b1b;
+  padding-right: 200px;
+  height: 150px;
+
+  p {
+    padding-left: 170px;
+    color: #4d4d4d;
+    font-size: 12px;
+    margin-bottom: -3px;
+    margin-top: 53px;
+  }
+
+  .footer-left-img-holder {
+    padding-left: 170px;
+    display: inline;
+    .master-img,
+    .visa-img {
+      margin-top: 20px;
+      margin-left: 5px;
+    }
+  }
+}
+.footer-right {
+  background: #212121;
+  float: right;
+  .footer-right-img-holder {
+    display: block;
+    width: 95px;
+    height: 64px;
+    margin: auto;
+    margin-top: 38px;
+    margin-left: 144px;
+  }
+}

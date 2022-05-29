@@ -1,26 +1,379 @@
 @import "../../../../scss/index.scss";
+.main-buttons {
+  margin-bottom: $base * 6 +1;
+
+  .filter-button {
+    line-height: 42px;
+    border: $second-border-color solid 2px;
+    display: inline-block;
+    color: $text-color;
+    font-size: 26px;
+    font-weight: normal;
+    border-radius: 15px;
+    text-align: center;
+    margin-right: 5px;
+    cursor: pointer;
+    margin-bottom: -5px;
+    height: 44px;
+    width: 31%;
+    &:hover {
+      color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+  .active-tab {
+    border: $error-color solid 2px;
+    color: $secondary-color;
+  }
+}
+
 .main-movies {
-  background-color: gray;
+  background-color: $background-color;
+  padding: 40px;
+
+  .filtering-content {
+    display: flex;
+    justify-content: center;
+    .filter-hall {
+      min-width: 100px;
+      padding: 4px 25px;
+      height: auto;
+      line-height: normal;
+      border: 2px solid #394349;
+      border-radius: 5px;
+      background-color: #272d31;
+      font-size: 16px;
+      margin: 8px;
+      width: auto;
+      color: $secondary-color;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background-color: $border-color;
+      }
+    }
+    .active-hall {
+      background-color: $border-color;
+    }
+    .laser-icon {
+      background-image: url(../../../../../public/images/Movies/laser-w.svg);
+      background-size: 70%;
+      background-position: 50% 45%;
+      color: transparent;
+      background-repeat: no-repeat;
+    }
+    .imax-icon {
+      background-image: url(../../../../../public/images/Movies/IMAX.svg);
+      background-size: auto 12px;
+      background-position: 50% 50%;
+      color: transparent;
+      background-repeat: no-repeat;
+    }
+    .dolby-icon {
+      background-image: url(../../../../../public/images/Movies/dolbyatmos-type.svg);
+      background-size: 44%;
+      background-position: 50% 45%;
+      color: transparent;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .movies-options {
+    display: flex;
+    justify-content: center;
+    .select-cinema {
+      border: 2px solid $border-color;
+      border-radius: 10px;
+      height: 45px;
+      width: 415px;
+      background: #272d31;
+      color: $secondary-color;
+      background-image: url(../../../../../public/images/arrovBottom.svg);
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      border: 2px solid $border-color;
+      padding: 5px 20px;
+    }
+  }
+  .filter-language-movies {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $base * 5;
+    .filter-language {
+      min-width: 100px;
+      padding: 4px 25px;
+      height: auto;
+      line-height: normal;
+      border: 2px solid #394349;
+      border-radius: 5px;
+      background-color: #272d31;
+      font-size: 16px;
+      margin: 8px;
+      width: auto;
+      color: $secondary-color;
+      cursor: pointer;
+      &:hover {
+        background-color: $border-color;
+      }
+    }
+    .active-language {
+      background-color: $border-color;
+    }
+  }
+}
+.campaign-offer {
+  display: flex;
+  margin-top: 45px !important ;
+  font-size: 16px;
+  color: $secondary-color;
+  text-align: center;
+  .super-day {
+    margin-right: 60px;
+  }
+  p {
+    padding: 20px;
+  }
+}
+.top-desc {
+  margin-top: 80px;
 }
 .movies-button {
   display: flex;
 }
-.filter-button {
-  line-height: 42px;
-  border: $second-border-color solid 2px;
-  display: inline-block;
-  color: $text-color;
-  font-size: 26px;
-  font-weight: normal;
-  border-radius: 15px;
-  text-align: center;
-  margin-right: 5px;
-  cursor: pointer;
-  margin-bottom: -5px;
-  height: 44px;
-  width: 31%;
+.video-trailer {
+  margin-top: 50px;
 }
-.activeMovie {
-  border: $error-color solid 2px;
+.movie-title {
+  width: 674px;
+  h2 {
+    font-size: 60px;
+    color: white;
+    line-height: 59.22px;
+    margin: 0;
+    position: relative;
+    top: -16px;
+  }
+}
+.main-movie-title {
+  height: 41px;
+  line-height: 41px;
+  width: 100%;
+  padding-right: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 20px;
+  color: #fff;
+}
+.movie-sessions {
+  height: 150px;
+  background-color: gray;
+  margin-left: calc(44% / 2);
+  margin: 0 -25px;
+  background-color: #2b3236;
+  padding: 0 25px 50px;
+  &.session-branch {
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .movie-session-title {
+    display: flex;
+  }
+  .hall-row {
+    min-height: 59px;
+    margin-bottom: 2px;
+    margin-top: 20px;
+    background-color: #212121;
+    display: flex;
+    .hall-title {
+      padding: $base * 5;
+      color: $secondary-color;
+    }
+    .hall-session {
+      margin-left: 118px;
+      width: 74%;
+      position: relative;
+      .info-session {
+        width: 33px;
+        background-color: #fff;
+        color: black;
+        display: none;
+        margin-bottom: 7px;
+        position: absolute;
+        top: -20px;
+      }
+    }
+    .session-time {
+      color: $secondary-color;
+      font-size: 11px;
+      position: absolute;
+      transform: translateX(-50%);
+      padding: 0 5px;
+      border-radius: 7px;
+      top: 30px;
+      cursor: pointer;
+      &:hover {
+        background-color: $third-background-color;
+        color: $second-text-color;
+      }
+    }
+  }
+  .select-cinema-detail {
+    height: 36px;
+    width: 182px;
+    background-color: $five-background-color;
+    border: none;
+    border-radius: 0;
+    color: #ddcbcb;
+    margin-top: 10px;
+  }
+  .gradient-session {
+    background-image: url(../../../../../public/images/dayline.png);
+    width: 961px;
+    height: 17px;
+    margin-top: 18px;
+    margin-left: 55px;
+    .session-times {
+      margin-right: 20px;
+      margin-top: 16px;
+      span {
+        font-size: 11px;
+        margin-right: 30px;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.order-ticket {
+  background-image: url(../../../../../public/images/order-ticket.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 288px;
+  height: 120px;
+  margin: auto;
+  padding: 25px;
+  padding-top: 23px;
+  h3 {
+    color: red;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 2px;
+  }
+  span {
+    color: #999999;
+  }
+  h4 {
+    margin: 0;
+    font-size: 18px;
+    color: $secondary-color;
+  }
+}
+.movie-description {
+  font-size: 13px;
+  line-height: 17px;
   color: $secondary-color;
+  padding-right: 80px;
+}
+.social-logos {
+  display: flex;
+  color: red;
+  list-style-type: none;
+  margin-top: 80px;
+  .facebook-logo {
+    a {
+      background-image: url(../../../../../public/images/logo/facebook.png);
+      width: 10px;
+      height: 17px;
+      background-position: 0 -30px;
+      transition: all 0.3s ease;
+      opacity: 0.8;
+      display: inline-block;
+      background-repeat: no-repeat;
+      margin-right: 30px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .twitter-logo {
+    a {
+      background-image: url(../../../../../public/images/logo/twitter.png);
+      width: 17px;
+      height: 17px;
+      background-position: 0 -30px;
+      transition: all 0.3s ease;
+      opacity: 0.8;
+      display: inline-block;
+      background-repeat: no-repeat;
+      margin-right: 30px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .youtube-logo {
+    a {
+      background-image: url(../../../../../public/images/logo/youtube.png);
+      width: 41px;
+      height: 27px;
+      background-position: 0px -21px;
+      transition: all 0.3s ease;
+      opacity: 0.8;
+      display: inline-block;
+      background-repeat: no-repeat;
+      margin-right: 30px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.movie-detail-image {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.detail-title {
+  display: block;
+  color: #999999;
+  font-size: 13px;
+  margin-top: 30px;
+  line-height: 21px;
+  margin-bottom: 0;
+  padding-top: 0px;
+}
+.movie-detail {
+  color: #fff;
+  list-style: none;
+  font-size: 14px;
+  width: 205px;
+  li {
+    list-style: none;
+  }
+}
+.more-movies {
+  display: flex;
+  margin-top: 130px;
+  .movie-item {
+    margin-right: 51px;
+    width: 140px;
+    text-align: center;
+    .movie-image {
+      margin-bottom: 19px;
+    }
+    span {
+      font-size: 14px;
+      color: $secondary-color;
+    }
+  }
+}
+
+.main-order-ticket {
+  margin: 0;
+  margin-bottom: 0;
+  margin-bottom: 35px;
+}
+.home-logos {
+  .social-logos {
+    margin: 0;
+  }
 }

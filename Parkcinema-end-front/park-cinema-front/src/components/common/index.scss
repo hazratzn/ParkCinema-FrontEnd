@@ -1,19 +1,47 @@
 @import "../../scss/index.scss";
-
+.movie-image {
+  img {
+    width: 142px;
+    height: 201px;
+  }
+}
+.movie {
+  margin-bottom: 27px;
+}
 .movie-title {
   font-size: 12px;
-  font-family: "HelveticaBold";
-  font-weight: bold !important;
   margin-top: -4px;
   color: $secondary-color;
   font-size: 12px;
   text-decoration: none;
 }
+.movie-ticket-buy {
+  background: $second-background-color;
+  border: none;
+  border-radius: 9px;
+  font-size: 13px;
+  padding: 4px 7px;
+  margin: auto;
+  outline: 0;
+  margin-top: 13px;
+  text-transform: uppercase;
+  width: auto;
+  height: 26px;
+  line-height: 19px;
+  color: $secondary-color;
+  display: block;
+  &:hover {
+    background-color: $error-color;
+  }
+  .movie-link-detail {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+}
 .movie-language {
   color: $disclaimer-color;
   padding: 0;
   margin: 2px 3px 0 0;
-  font-family: "HelveticaRegular";
   font-size: $base * 3;
   span {
     display: inline-block;
@@ -21,13 +49,11 @@
 }
 .movie-date {
   font-size: 12px;
-  font-family: "HelveticaRegular";
   margin-top: -1px;
   color: $third-text-color;
 }
 .movie-type {
   font-size: 12px;
-  font-family: "HelveticaRegular";
   margin-top: -1px;
   color: #e2e6e8;
 }
@@ -38,4 +64,5 @@
   border-radius: 4px;
   padding: 0 3px;
   margin: 2px 0;
+  font-size: 12px;
 }

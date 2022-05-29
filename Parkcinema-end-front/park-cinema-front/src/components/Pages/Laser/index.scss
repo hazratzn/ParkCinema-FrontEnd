@@ -1,0 +1,20 @@
+@import "../../../scss/index.scss";
+.laser-slider {
+  height: 300px;
+  overflow: hidden;
+}
+.laser-description {
+  p {
+    @include hall-paragrapgh-style($margin: 20px);
+  }
+  ul {
+    li {
+      font-size: 13px;
+      line-height: 17px;
+      color: $secondary-color;
+    }
+  }
+}
+.laser-title {
+  @include title-style;
+}

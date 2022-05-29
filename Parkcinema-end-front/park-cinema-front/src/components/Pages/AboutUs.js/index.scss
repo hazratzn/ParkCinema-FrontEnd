@@ -1,0 +1,46 @@
+@import "../../../scss/index.scss";
+.about-us {
+  .about-us-title {
+    @include title-style;
+  }
+  .main-cinema-info {
+    font-size: $base * 5 + 2;
+    color: $secondary-color;
+    margin-bottom: 14px;
+  }
+  .main-cinema-description,
+  .socialbaker-statistic {
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: $secondary-color;
+    margin-bottom: 14px;
+  }
+  .cinema-address {
+    p {
+      margin: 0 0 10px;
+      color: $secondary-color;
+      font-size: 14px;
+    }
+  }
+  .TabsListUnstyled-root {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    .TabUnstyled-root {
+      background: none;
+      border: 2px solid $error-color;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+  }
+  .tab-image {
+    img {
+      width: 900px;
+      height: 400px;
+    }
+    p {
+      color: #fff;
+      margin: 0 0 10px;
+      padding: 30px 55px 0 0;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "../../../scss/index.scss";
+.hall-info {
+  img {
+    width: 100%;
+  }
+}
+.imax-title {
+  @include title-style;
+}
+.imax-session {
+  width: calc(100vw / 4 * 3);
+  height: 150px;
+  margin-left: 22%;
+  margin: 75px -25px;
+  padding: 0 25px 50px;
+  background-color: inherit;
+}
+.movie-sessions {
+  .imax-select {
+    height: 36px;
+    width: 182px;
+    border: #3a3a3a solid 2px;
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: inherit;
+    padding: 5px 20px;
+  }
+}
+.title-imax-technologie {
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: $secondary-color;
+}
+.technologie-description {
+  @include hall-paragrapgh-style;
+}
+.technologie-image {
+  margin: 0 0 10px;
+}
+.today-imax-technologie {
+  h2 {
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+}
+.imagine-unlimited {
+  h3 {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: $secondary-color;
+  }
+  p {
+    @include hall-paragrapgh-style;
+  }
+}
+.imax-hall-info {
+  color: $secondary-color;
+  p {
+    margin: 0 0 10px;
+    color: $secondary-color;
+  }
+}
+.imax-hall-description {
+  p {
+    @include hall-paragrapgh-style;
+  }
+  .imax-hall-image {
+    margin-bottom: $base * 4;
+  }
+}
+.imax-hall-section {
+  .carousel-root {
+    background: none;
+    .thumbs {
+      left: 0;
+    }
+  }
+}
