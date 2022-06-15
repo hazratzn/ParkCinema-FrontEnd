@@ -1,0 +1,77 @@
+.slider-image {
+  background-image: url(../../../../images/cinema-bg.jpg);
+
+  vertical-align: middle;
+  width: 100%;
+}
+.cinemas-header-slider {
+  position: relative;
+}
+.shadow-top {
+  position: absolute;
+  width: 100%;
+  height: 325px;
+  top: 0;
+  background: url(../../../../images/top-shadow.png) repeat-x top center;
+}
+.shadow-bottom {
+  position: absolute;
+  width: 100%;
+  height: 178px;
+  bottom: 0;
+  background: url(../../../../images/bottom-shadow.png) repeat-x bottom center;
+}
+
+.title {
+  font-family: HelveticaMedium;
+  font-size: 60px;
+  color: white;
+  line-height: 59.22px;
+  margin: 0;
+  position: relative;
+  top: -16px;
+}
+.cinema-content {
+  margin: 0 0 95px;
+  width: 830px;
+}
+
+.cinema-image {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0px;
+  background: url(../../../../images/parkbulvar.jpg);
+}
+.cinema-item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5% 40px 0;
+  width: 45%;
+  .cinema-img-holder {
+    width: 100%;
+    height: 260px;
+    margin: 0 0 25px;
+  }
+  .detail {
+    font-size: 13px;
+    color: #fff;
+  }
+  .cinema-title {
+    font-family: "helveticaAZ";
+    font-weight: bold !important;
+    display: block;
+    font-family: "HelveticaBold";
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0 20px;
+  }
+  div {
+    color: white;
+  }
+  span {
+    color: #ff0000;
+  }
+}

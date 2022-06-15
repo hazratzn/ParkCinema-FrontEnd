@@ -1,17 +1,12 @@
 import React from "react";
 import "./index.scss";
-import adverstimentAnkaImage from "../../../images/anka.png";
-import adverstimentOfferImage from "../../../images/aside-image.png";
+import adImg from "../../../images/anka.png";
 
-const Advertisement = (props) => {
-  const { style } = props;
+const Advertisement = () => {
   return (
-    <>
-      <div className={style ? `img-holder ${style}` : "img-holder"}>
-        <img src={adverstimentOfferImage} alt="teklif shekili" />
-        <img src={adverstimentAnkaImage} alt="kino shekili" />
-      </div>
-    </>
+    <div className="img-holder">
+      <img src={adImg} />
+    </div>
   );
 };
 
