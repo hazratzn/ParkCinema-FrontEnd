@@ -1,0 +1,15 @@
+@mixin title-style {
+  color: $secondary-color;
+  font-size: $base * 15;
+  line-height: 59.22px;
+  margin: 0;
+  position: relative;
+  top: -16px;
+  font-family: sans-serif;
+}
+@mixin hall-paragrapgh-style($margin: $margin-10) {
+  font-size: 13px;
+  line-height: 17px;
+  margin: 0 0 $margin;
+  color: $secondary-color;
+}

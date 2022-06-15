@@ -97,3 +97,36 @@ nav {
     }
   }
 }
+.dropdown-toggle {
+  &::after {
+    display: none !important;
+  }
+}
+.dropdown-menu {
+  background-color: #212121 !important;
+  padding: 5px 29px 5px 5px;
+  width: 261px;
+  margin-top: -17px;
+  position: absolute;
+  z-index: 1000;
+  display: block;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  transform: translate3d(1px, 41px, 10px) !important;
+  .dropdown-item {
+    color: #fff;
+    margin-bottom: 5px;
+    &:hover {
+      color: $secondary-color;
+      background-color: $error-color;
+    }
+  }
+  a {
+    margin: 0;
+  }
+}

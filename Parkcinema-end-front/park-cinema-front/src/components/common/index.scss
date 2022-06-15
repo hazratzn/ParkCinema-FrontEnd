@@ -24,19 +24,24 @@
   margin: auto;
   outline: 0;
   margin-top: 13px;
-  // font-family: PFSquareSansProBold;
   text-transform: uppercase;
   width: auto;
   height: 26px;
   line-height: 19px;
   color: $secondary-color;
   display: block;
+  &:hover {
+    background-color: $error-color;
+  }
+  .movie-link-detail {
+    text-decoration: none;
+    color: $secondary-color;
+  }
 }
 .movie-language {
   color: $disclaimer-color;
   padding: 0;
   margin: 2px 3px 0 0;
-  // font-family: "HelveticaRegular";
   font-size: $base * 3;
   span {
     display: inline-block;
@@ -44,13 +49,11 @@
 }
 .movie-date {
   font-size: 12px;
-  // font-family: "HelveticaRegular";
   margin-top: -1px;
   color: $third-text-color;
 }
 .movie-type {
   font-size: 12px;
-  // font-family: "HelveticaRegular";
   margin-top: -1px;
   color: #e2e6e8;
 }

@@ -5,21 +5,41 @@ import "./index.scss";
 import axios from "axios";
 import { Form } from "react-bootstrap";
 import Advertisement from "../../../layout/Advertisement/Advertisment";
+import superDay from "../../../../images/super-gun.png";
+import forStudents from "../../../../images/imax-telebeler-ucun.png";
+import { moviesApi } from "../../../../api/moviesAPI";
 
 const Movies = () => {
   const [movies, setMovies] = React.useState([]);
   const [toggleTab, setToggleTab] = React.useState(1);
   const [selectHall, setSelectHall] = React.useState(1);
   const [selectLanguage, setSelectLanguage] = React.useState(0);
-  console.log(movies);
+  const [filterMovie, setFilterMovie] = React.useState({
+    format: "",
+    branchId: "",
+    language: "",
+  });
+
+  React.useEffect(() => {
+    moviesApi.getMovies().then((res) => setMovies(res.data));
+  }, []);
 
   React.useEffect(() => {
     axios
-      .get("https://localhost:44300/api/Movies/GetMovies")
+      .get("https://localhost:44300/api/Movies/GetFilteredMovies", {
+        params: {
+          format: filterMovie.format,
+          branchId: filterMovie.branchId,
+          language: filterMovie.language,
+        },
+      })
       .then((res) => setMovies(res.data));
-  }, []);
+  }, [filterMovie]);
 
-  console.log(movies);
+  const handleFilm = (e) => {
+    setFilterMovie({ ...filterMovie, branchId: e.target.value });
+  };
+
   return (
     <Container>
       <Row>
@@ -65,6 +85,11 @@ const Movies = () => {
                 }
                 onClick={() => {
                   setSelectHall(1);
+                  setFilterMovie({
+                    format: "",
+                    branchId: "",
+                    language: "",
+                  });
                 }}
               >
                 Hamısı
@@ -77,6 +102,7 @@ const Movies = () => {
                 }
                 onClick={() => {
                   setSelectHall(2);
+                  setFilterMovie({ ...filterMovie, format: "imax" });
                 }}
               >
                 İMAX
@@ -89,6 +115,7 @@ const Movies = () => {
                 }
                 onClick={() => {
                   setSelectHall(3);
+                  setFilterMovie({ ...filterMovie, format: "laser" });
                 }}
               >
                 LaseR
@@ -101,6 +128,7 @@ const Movies = () => {
                 }
                 onClick={() => {
                   setSelectHall(4);
+                  setFilterMovie({ ...filterMovie, format: "dolbyatmos" });
                 }}
               >
                 Dolby
@@ -111,6 +139,7 @@ const Movies = () => {
                 }
                 onClick={() => {
                   setSelectHall(5);
+                  setFilterMovie({ ...filterMovie, format: "3D" });
                 }}
               >
                 3D
@@ -121,6 +150,7 @@ const Movies = () => {
                 }
                 onClick={() => {
                   setSelectHall(6);
+                  setFilterMovie({ ...filterMovie, format: "2D" });
                 }}
               >
                 2D
@@ -130,13 +160,13 @@ const Movies = () => {
               <Form.Select
                 aria-label="Default select example"
                 className="select-cinema"
+                onChange={handleFilm}
               >
                 <option className="main-movie-title">Kinoteatrlar</option>
-                <option value="Park Bulvar">Park Bulvar</option>
-                <option value="Metro Park">Metro Park</option>
-                <option value="Flame Towers">Flame Towers</option>
-                <option value="Zaqulba">Zaqulba</option>
-                <option value="Şahdağ">Şahdağ</option>
+                <option value="1">Park Bulvar</option>
+                <option value="3">Metro Park</option>
+                <option value="4">Flame Towers</option>
+                <option value="5">Zaqulba</option>
               </Form.Select>
             </div>
             <div className="filter-language-movies">
@@ -148,6 +178,7 @@ const Movies = () => {
                 }
                 onClick={() => {
                   setSelectLanguage(1);
+                  setFilterMovie({ ...filterMovie, language: "en" });
                 }}
               >
                 Ingilis dilində filmlər
@@ -160,6 +191,7 @@ const Movies = () => {
                 }
                 onClick={() => {
                   setSelectLanguage(2);
+                  setFilterMovie({ ...filterMovie, language: "tr" });
                 }}
               >
                 Türk dilində filmlər
@@ -173,8 +205,61 @@ const Movies = () => {
               ))}
             </Row>
           </div>
+
+          <div className="campaign-offer">
+            <div className="super-day">
+              <img src={superDay} alt="super gun shekil" />
+              <p>Super gün</p>
+            </div>
+            <div className="for-students">
+              <img src={forStudents} alt="telebe kampanya shekil" />
+              <p>
+                IMAX tələbələr
+                <br></br>
+                üçün
+              </p>
+            </div>
+          </div>
         </Col>
-        <Col md={3}>
+        <Col md={3} className="home-logos">
+          <ul className="social-logos">
+            <li className="facebook-logo">
+              <a
+                href="https://www.facebook.com/ParkCinema"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+              </a>
+            </li>
+            <li className="twitter-logo">
+              <a
+                href="https://twitter.com/park_cinema"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+              </a>
+            </li>
+            <li className="youtube-logo">
+              <a
+                href="https://www.youtube.com/channel/UC0NJN0gCCx_DbJlkPfD30Ag/feed"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+              </a>
+            </li>
+          </ul>
+          <div className="order-ticket main-order-ticket">
+            <h3>Biletlərin sifarişi</h3>
+            <h4>
+              <span>+994 12</span> 598 74 14
+            </h4>
+            <h4>
+              119 <span>( ödənişli )</span>
+            </h4>
+          </div>
           <Advertisement />
         </Col>
       </Row>

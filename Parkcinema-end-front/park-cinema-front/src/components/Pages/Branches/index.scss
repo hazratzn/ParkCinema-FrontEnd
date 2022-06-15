@@ -1,0 +1,174 @@
+@import "../../../scss/index.scss";
+.cinemas-title {
+  font-size: 60px;
+  color: $secondary-color;
+  line-height: 59.22px;
+  margin: 0;
+  position: relative;
+  top: -16px;
+}
+.slider-image {
+  background-image: url(../../../images/cinema-bg.jpg);
+
+  vertical-align: middle;
+  width: 100%;
+}
+.cinemas-header-slider {
+  position: relative;
+  min-height: 300px;
+}
+.shadow-top {
+  position: absolute;
+  width: 100%;
+  height: 325px;
+  top: 0;
+  background: url(../../../images/top-shadow.png) repeat-x top center;
+}
+.shadow-bottom {
+  position: absolute;
+  width: 100%;
+  height: 178px;
+  bottom: 0;
+  background: url(../../../images/bottom-shadow.png) repeat-x bottom center;
+}
+
+.title {
+  font-family: HelveticaMedium;
+  font-size: 60px;
+  color: white;
+  line-height: 59.22px;
+  margin: 0;
+  position: relative;
+  top: -16px;
+}
+.cinema-content {
+  margin: 0 0 95px;
+  width: 830px;
+}
+
+.cinema-image {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0px;
+  background: url(../../../images/parkbulvar.jpg);
+}
+.cinema-item {
+  vertical-align: top;
+  margin: 0 5% 40px 0;
+  img {
+    margin: 0 0 25px;
+  }
+  .detail {
+    font-size: 13px;
+    color: #fff;
+  }
+  .cinema-title {
+    display: block;
+    color: $secondary-color;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: sans-serif;
+    &:hover {
+      color: $error-color;
+      text-decoration: underline;
+    }
+  }
+
+  div {
+    color: $secondary-color;
+  }
+  span {
+    color: $error-color;
+  }
+}
+.branch-title {
+  h1 {
+    font-size: $base * 15;
+    color: $secondary-color;
+    line-height: 59.22px;
+    margin: 0;
+    position: relative;
+    top: -16px;
+    font-family: sans-serif;
+  }
+  h4 {
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #737373;
+    font-style: italic;
+  }
+  .map-link {
+    color: $secondary-color;
+  }
+}
+.TabUnstyled-root {
+  padding: 5px 10px;
+  display: inline-block;
+  color: $secondary-color;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #2c2c2e;
+  border: none;
+  margin-top: -74px;
+}
+
+.control-dots {
+  .dot {
+    display: none !important;
+  }
+}
+.carousel {
+  .thumb {
+    width: 94px !important;
+    height: 60px !important;
+    border: 2px solid #515151 !important;
+    display: inline-block !important;
+    margin: 0 10px 20px 0 !important;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  .carousel-status {
+    display: none;
+  }
+  .selected {
+    margin-top: 40px !important;
+  }
+}
+.detailItem {
+  margin: 0 4% 45px 0;
+  font-size: 13px;
+  color: $secondary-color;
+  h5 {
+    font-size: 13px;
+    color: $secondary-color;
+    font-family: sans-serif;
+    border-bottom: 2px solid $error-color;
+  }
+}
+.hall-tabs {
+  .TabsListUnstyled-root {
+    margin: 20px 0;
+  }
+  .TabUnstyled-root {
+    background-color: inherit;
+    border-bottom: 1px dashed;
+    border-radius: 0;
+    margin: 0 10px;
+  }
+  .tablist {
+    margin: 20px 0;
+  }
+}
+.hall-image {
+  img {
+    margin: 0 0 50px;
+  }
+}

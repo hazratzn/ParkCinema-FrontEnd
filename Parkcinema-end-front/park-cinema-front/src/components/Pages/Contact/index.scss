@@ -1,0 +1,73 @@
+@import "../../../scss/index.scss";
+.contact-tabs {
+  margin-top: 20px;
+}
+.contact-title {
+  @include title-style;
+}
+
+.contact-parkbulvar {
+  h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: $secondary-color;
+  }
+  form {
+    label {
+      display: block;
+      padding: 0;
+      margin-left: 0px;
+      line-height: 25px;
+      color: #fff;
+      text-align: left;
+      white-space: normal;
+      font-size: 13px;
+    }
+    input {
+      min-width: 75%;
+    }
+    .submit-button {
+      margin-top: 5px;
+      .form-button {
+        background: $error-color;
+        border: $error-color solid 1px;
+        font-size: 15px;
+        padding: 0 20px;
+        height: 30px;
+        font-weight: normal;
+        line-height: 32px;
+        text-transform: uppercase;
+        border-radius: 9px;
+        color: $secondary-color;
+        font-family: PFSquareSansProBold;
+        &:hover {
+          background: $secondary-color;
+          color: $error-color;
+        }
+      }
+    }
+  }
+  .user-name,
+  .user-email {
+    display: inline-block;
+    margin-right: 40px;
+    min-width: 35%;
+    margin-right: 80px;
+    min-width: 35%;
+  }
+  .user-textarea {
+    margin-top: 20px;
+    textarea {
+      min-width: 70%;
+      min-height: 100px;
+    }
+  }
+}

@@ -121,6 +121,22 @@
     }
   }
 }
+.campaign-offer {
+  display: flex;
+  margin-top: 45px !important ;
+  font-size: 16px;
+  color: $secondary-color;
+  text-align: center;
+  .super-day {
+    margin-right: 60px;
+  }
+  p {
+    padding: 20px;
+  }
+}
+.top-desc {
+  margin-top: 80px;
+}
 .movies-button {
   display: flex;
 }
@@ -139,24 +155,95 @@
   }
 }
 .main-movie-title {
-  height: "41px";
-  line-height: "41px";
-  width: "100%";
-  padding-right: "40px";
-  text-overflow: "ellipsis";
-  overflow: " hidden";
-  font-size: "20px";
-  color: " #fff";
+  height: 41px;
+  line-height: 41px;
+  width: 100%;
+  padding-right: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 20px;
+  color: #fff;
 }
 .movie-sessions {
   height: 150px;
-  width: calc(100% / 2);
   background-color: gray;
   margin-left: calc(44% / 2);
   margin: 0 -25px;
   background-color: #2b3236;
   padding: 0 25px 50px;
+  &.session-branch {
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .movie-session-title {
+    display: flex;
+  }
+  .hall-row {
+    min-height: 59px;
+    margin-bottom: 2px;
+    margin-top: 20px;
+    background-color: #212121;
+    display: flex;
+    .hall-title {
+      padding: $base * 5;
+      color: $secondary-color;
+    }
+    .hall-session {
+      margin-left: 118px;
+      width: 74%;
+      position: relative;
+      .info-session {
+        width: 33px;
+        background-color: #fff;
+        color: black;
+        display: none;
+        margin-bottom: 7px;
+        position: absolute;
+        top: -20px;
+      }
+    }
+    .session-time {
+      color: $secondary-color;
+      font-size: 11px;
+      position: absolute;
+      transform: translateX(-50%);
+      padding: 0 5px;
+      border-radius: 7px;
+      top: 30px;
+      cursor: pointer;
+      &:hover {
+        background-color: $third-background-color;
+        color: $second-text-color;
+      }
+    }
+  }
+  .select-cinema-detail {
+    height: 36px;
+    width: 182px;
+    background-color: $five-background-color;
+    border: none;
+    border-radius: 0;
+    color: #ddcbcb;
+    margin-top: 10px;
+  }
+  .gradient-session {
+    background-image: url(../../../../../public/images/dayline.png);
+    width: 961px;
+    height: 17px;
+    margin-top: 18px;
+    margin-left: 55px;
+    .session-times {
+      margin-right: 20px;
+      margin-top: 16px;
+      span {
+        font-size: 11px;
+        margin-right: 30px;
+        color: $secondary-color;
+      }
+    }
+  }
 }
+
 .order-ticket {
   background-image: url(../../../../../public/images/order-ticket.png);
   background-repeat: no-repeat;
@@ -191,6 +278,7 @@
   display: flex;
   color: red;
   list-style-type: none;
+  margin-top: 80px;
   .facebook-logo {
     a {
       background-image: url(../../../../../public/images/logo/facebook.png);
@@ -276,5 +364,16 @@
       font-size: 14px;
       color: $secondary-color;
     }
+  }
+}
+
+.main-order-ticket {
+  margin: 0;
+  margin-bottom: 0;
+  margin-bottom: 35px;
+}
+.home-logos {
+  .social-logos {
+    margin: 0;
   }
 }

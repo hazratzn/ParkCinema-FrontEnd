@@ -7,20 +7,28 @@ import { Link } from "react-router-dom";
 const Movie = ({ movie }) => {
   const date = movie.startTime;
 
-  console.log(movie);
   return (
     <>
       <Row>
         <Col md={6}>
           <div className="movie-image" key={movie.id}>
-            <img src={movie.image} alt="movie" className="img-fluid" />
-            <button className="movie-ticket-buy">Bilet al</button>
+            <Link to={{ pathname: `/movie/${movie.id}` }}>
+              <img src={movie.image} alt="movie" className="img-fluid" />
+            </Link>
+            <button className="movie-ticket-buy">
+              <Link
+                to={{ pathname: `/movie/${movie.id}` }}
+                className="movie-link-detail"
+              >
+                Bilet al
+              </Link>
+            </button>
           </div>
         </Col>
         <Col md={6}>
           <div className="movie-description" key={movie.id}>
             <Link
-              to={`movie/${movie.id}`}
+              to={{ pathname: `/movie/${movie.id}` }}
               className="text-decoration-none movie-title"
             >
               {movie.name}
